@@ -1,0 +1,78 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: white;
+    background-image: url('/pictures/swipefood.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h2 {
+    border-bottom: 1px solid teal;
+    display: block;
+    margin: 0 100px;
+    padding: 8px 0;
+}
+
+/* Bordered form */
+form {
+    border: 3px solid teal;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: teal;
+    font-size: 1.25em;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+    background-color: #D5F2EB;
+}
+
+.shadow{
+    width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+}
+
+.w3-theme {color:#000 !important; background-color:white !important}
+.w3-theme-selected {color:#FFF !important; background-color:teal !important}
+
+.w3-hover-theme:hover {color:#000 !important; background-color:#D5F2EB !important}
+.w3-theme-selected:hover {color:#FFF !important; background-color:teal !important}

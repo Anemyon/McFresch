@@ -1,0 +1,25 @@
+body {
+    font-family: 'Ubuntu', sans-serif
+}
+
+.w3-theme {
+    color:#000 !important; background-color:white !important
+}
+.w3-theme-selected {
+    color:#FFF !important; background-color:teal !important
+}
+
+.w3-hover-theme:hover {
+    color:#000 !important; background-color:#D5F2EB !important
+}
+.w3-theme-selected:hover {
+    color:#FFF !important; background-color:teal !important
+}
+
+a {
+    text-decoration: none;
+}
+
+.lookatus {
+    width: 250px;
+}
