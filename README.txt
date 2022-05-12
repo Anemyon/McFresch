@@ -1,3 +1,3 @@
-Wir empfehlen die Instanziierung und Benutzung einer virtuellen Umgebung<br>
-Dann die Requiremnts aus der "requirements.txt" herunterladen<br>
+Wir empfehlen die Instanziierung und Benutzung einer virtuellen Umgebung
+Dann die Requiremnts aus der "requirements.txt" herunterladen
 Dann main.py starten
