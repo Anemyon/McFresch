@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrierung - McFresh</title>
+  <link rel="icon" href="/static/pictures/logo_mittel.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Mainsytle -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- CSS für SignUp -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/login_signup.css') }}">
+
+  <style>
+    body{
+      font-family: 'Ubuntu', sans-serif;
+      background-color: white;
+      background-image: url('/pictures/signup2.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+{% block title %}Sign Up{% endblock %} {% block
+content %}
+
+<nav class="w3-top">
+  <div class="w3-bar w3-card w3-white" style="justify-content: center; display: flex">
+    <a href="{{url_for('fresh.main')}}" class="w3-theme w3-hover-theme w3-bar-item w3-button"><img src="/static/pictures/McFreshLogo.png" style="width: 2em"></a>
+    {% if current_user.is_authenticated %}
+    <a href="{{url_for('fresh.logout')}}" class="w3-padding-large w3-hover-teal w3-hide-small w3-right w3-hover-theme" style="background-color: teal; color: white">{{current_user.vorname}} abmelden</a>
+    {% else %}
+    <a href="{{url_for('fresh.login')}}" class="w3-padding-large w3-hover-teal w3-hide-small w3-right w3-hover-theme" style="background-color: teal; color: white">Anmelden</a>
+    {% endif %}
+    
+  </div>
+</nav>
+
+
+<div class="w3-content" style="max-width:400px; margin-top:46px">
+
+  <form method="POST" style="border: 0">
+    <div class="w3-row w3-display-middle w3-round-large shadow" style="background-color: #D5F2EB; border: 3px solid teal">
+      <h2 class="w3-center"><b>Registrieren</b></h2>
+
+
+      <div class="container">
+        <div class="form-group">
+          <label for="email"><b>E-Mail Addresse</b></label>
+          <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Gebe hier deine E-Mail ein"
+          />
+        </div>
+        <div class="w3-row">
+          <div class="form-group w3-half" style="padding-right: 2px">
+            <label for="firstName"><b>Vorname</b></label>
+            <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Dein Vorname"
+            />
+          </div>
+          <div class="form-group w3-half" style="padding-left: 2px">
+            <label for="lastName"><b>Nachname</b></label>
+            <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Dein Nachname"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password1"><b>Passwort</b></label>
+          <input
+                  type="password"
+                  class="form-control"
+                  id="password1"
+                  name="password1"
+                  placeholder="Gebe hier dein Passwort ein"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password2"><b>Password wiederholen</b></label>
+          <input
+                  type="password"
+                  class="form-control"
+                  id="password2"
+                  name="password2"
+                  placeholder="Bestätige dein Passwort"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password2"><b>Vegan</b></label>
+          <input
+                  type="checkbox"
+                  
+                  id="vegan"
+                  name="vegan"
+                  
+          />
+        </div>
+        <br />
+        <button type="submit" class="w3-round" style="font-size: 1.25em">Jetzt registrieren</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
