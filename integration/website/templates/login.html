@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - McFresch</title>
+  <link rel="icon" href="/static/pictures/logo_mittel.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Mainsytle -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- CSS für SignUp -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/login_signup.css') }}">
+
+</head>
+<body>
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+%}
+
+<nav class="w3-top">
+  <div class="w3-bar w3-card w3-white" style="justify-content: center; display: flex">
+    <a href="{{url_for('fresh.main')}}" class="w3-theme w3-hover-theme w3-bar-item w3-button"><img src="/static/pictures/McFreshLogo.png" style="width: 2em"></a>
+    <a href="{{url_for('fresh.sign_up')}}" class="w3-theme-selected w3-bar-item w3-button w3-padding-large w3-hide-small"><img src="/static/pictures/login_white.png" style="width: 1.75em; margin-right: 7px; margin-bottom: 2px">Sign Up</a>
+    <!-- BITTE SO HINBEKOMMEN, DASS DIE BEIDEN REITER ERST AKTIVIERT WERDEN; WENN LOGIN AUSGEFÜHRT WURDE-->
+    
+  </div>
+</nav>
+
+<div class="w3-content w3-display-middle" style="max-width:400px; margin-top:46px">
+  <form method="post" class="w3-round">
+    <div class="w3-center container" style="padding-bottom: 0px">
+      <img src="/static/pictures/LogoOutline.png" alt="McFresch Logo" style="max-width: 10vw">
+      <h2 style="margin: 0px"><b>McFresch</b></h2>
+    </div>
+
+    <div class="container">
+      <div class="form-group">
+        <label for="email"><b>E-Mail Adresse</b></label>
+        <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Gib deine E-Mail ein"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password"><b>Password</b></label>
+        <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Gib dein Passwort ein"
+        />
+      </div>
+      <br />
+      <button type="submit" class="w3-round" style="font-size: 1.25em">Login</button>
+
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1; text-align: center">
+      <a href="{{url_for('fresh.sign_up')}}">Neuer Kunde? Hier registrieren</a>
+    </div>
+  </form>
+
+</div>
+
+</body>
+</html>
+{% endblock %}
